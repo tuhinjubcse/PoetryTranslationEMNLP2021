@@ -14,4 +14,10 @@ Test data with Gold References and Generated Candidate present in testdatawithtr
 
           All 6 lang-pairs
           Additionally Romanian-English, Ukranian-English Swedish-English
+          
+
+Requirements
+
+                    pip3 install sentencepiece==0.1.96
+                    pip3 install transformers==4.4.0
 
