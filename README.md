@@ -41,3 +41,17 @@ To translate any given language to english
 
                     python translate.py
 
+
+To finetune MBART-50 many-to-one model run
+                    
+                    sh finetune.sh
+                    Edit  line 62 to set rootdir to access data file /transformers/examples/seq2seq/run_translation.py
+
+To finetune MBART-50 many-to-one on language-family-specific data or only on one language set the dataflags to False in run_translation
+                                   spanish = True
+                                   portugese = True
+                                   russian = True
+                                   german = True
+                                   italian = True
+                                   dutch = True
+
