@@ -64,3 +64,5 @@ To evaluate use following files, please edit language and mode
                                         
                                         calculate-bs.py
                                         calculate-bleu.py
+                                        
+comet_scroes.ipynb contains a Colab notebook that can be used to reproduce the COMET scores                                  
