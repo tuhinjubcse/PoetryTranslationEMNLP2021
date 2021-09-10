@@ -23,7 +23,7 @@ Requirements
                     pip3 install sentencepiece==0.1.96
                     pip3 install transformers==4.4.0
                     pip3 install datasets==1.4.1
-                    pip3 install transformers==0.3.8
+                    pip3 install bert_score==0.3.8
                     
                     
 
