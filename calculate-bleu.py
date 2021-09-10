@@ -1,16 +1,12 @@
-from bert_score import score
+import datasets
+sacrebleu = datasets.load_metric("sacrebleu")
 import json
-cands = []
-refs =  []
-import os
-os.environ["CUDA_VISIBLE_DEVICES"]='2'
-
 
 lang = 'german'
-langpair = False
 many  = True
 prose = False
 zeroshot = False
+langpair = False
 multiopus = False
 f = './testdatawithtranslations/'+lang+'/gold'+lang+'.txt'
 if many:
@@ -30,8 +26,7 @@ else:
 for x,y in zip(open(f),open(g)):
     if x.strip()=='--------------------------------------------------------------------------------':
         continue
-    cands.append(y)
-    refs.append(x)
-    P, R, F1 = score(cands, refs, lang="en", model_type='microsoft/deberta-large-mnli')
-    result = F1.mean()
-    print(result)
+    sys.append(y.strip())
+    refs.append([x.strip()])
+    result = sacrebleu.compute(predictions=sys, references=refs)
+    print(result['score'])
