@@ -59,3 +59,8 @@ To finetune MBART-50 many-to-one on language-family-specific data or only on one
                                    italian = True
                                    dutch = True
 
+
+To evaluate use following files, please edit language and mode
+                                        
+                                        calculate-bs.py
+                                        calculate-bleu.py
