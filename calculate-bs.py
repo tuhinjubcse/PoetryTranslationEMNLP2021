@@ -9,12 +9,15 @@ os.environ["CUDA_VISIBLE_DEVICES"]='2'
 lang = 'german'
 langpair = False
 many  = False
-prose = True
+prose = False
 zeroshot = False
+multiopus = True
 f = './testdatawithtranslations/'+lang+'/gold'+lang+'.txt'
 if many:
     g = './testdatawithtranslations/'+lang+'/'+lang+'poetrymanybeam5.txt'
 else:
+    if multiopus:
+        g = './testdatawithtranslations/'+lang+'/'+lang+'multiopus.txt'
     if zeroshot:
         g = './testdatawithtranslations/'+lang+'/'+lang+'zeroshot.txt'
     elif prose:
